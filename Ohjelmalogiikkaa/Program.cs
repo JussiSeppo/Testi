@@ -6,26 +6,17 @@ namespace ArvaaLukuPeli
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Arvaa numero:");  
+        Console.WriteLine("Arvaa luku:");  
 
-            int random = new Random().Next(1, 11)
-            int arvaus;
-            int arvauksia = 0;
-            Boolean voitto = false;
+        Random rand = new Random();
+        int oikea = rand.Next(1, 11);
+        Console.WriteLine(oikea);
 
-            while (arvauksia != 3 && voitto != true)
-            {
-            Console.WriteLine("Arvaa numero 1-10 väliltä:");
-
-            arvauksia++;
-
-                var arvaus = Console.ReadLine();
-
-                if (validateInput())
+        Console.WriteLine("Peli on päättynyt");
                 
-            }
+        }
 
-  }
+    }
 }
 
 
