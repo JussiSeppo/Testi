@@ -2,33 +2,40 @@
 
 namespace ArvaaLukuPeli
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Arvaa luku:");  
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Arvaa luku:");
 
-        Random rand = new Random();
-        int oikea = rand.Next(1, 21);
-        Console.WriteLine(oikea);
+            Random rand = new Random();
+            int oikea = rand.Next(1, 21);
+            //Console.WriteLine(oikea);
 
-        Console.WriteLine("Anna arvauksesi välillä 1-20");
-        string syöte = Console.ReadLine();
-        int arvaus = int.Parse(syöte);
+            for (int arvauskerta = 0; arvauskerta < 3; arvauskerta++)
+            {
+                Console.WriteLine("Anna arvauksesi välillä 1-20");
+                string syöte = Console.ReadLine();
+                int arvaus = int.Parse(syöte);
 
-        if (arvaus < oikea) {
-            Console.WriteLine("Oikea luku on suurempi!");
-        }
-        else if (arvaus > oikea) {
-            Console.WriteLine("Oieka luku on pienempi!");
-        }
-        else {
-            Console.WriteLine("Jee! Arvasit oikein! Voitit pelin!");
+                if (arvaus < oikea)
+                {
+                    Console.WriteLine("Oikea luku on suurempi!");
+                }
+                else if (arvaus > oikea)
+                {
+                    Console.WriteLine("Oikea luku on pienempi!");
+                }
+                else
+                {
+                    Console.WriteLine("Jee! Arvasit oikein! Voitit pelin!");
+                    break;
+                }
 
-        }
+            }
 
-        Console.WriteLine("Peli on päättynyt");
-                
+            Console.WriteLine("Peli on päättynyt");
+
         }
 
     }
