@@ -1,18 +1,31 @@
 ﻿using System;
 
-namespace Ohjelmalogiikkaa
+namespace ArvaaLukuPeli
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+      Console.WriteLine("Arvaa numero:");  
 
-            const int Viikonpäiviä = 7;
-            luku = 987;
-            Console.WriteLine(luku);
-            Console.WriteLine(Viikonpäiviä);
+            int random = new Random().Next(1, 11)
+            int arvaus;
+            int arvauksia = 0;
+            Boolean voitto = false;
 
-        }
-    }
+            while (arvauksia != 3 && voitto != true)
+            {
+            Console.WriteLine("Arvaa numero 1-10 väliltä:");
+
+            arvauksia++;
+
+                var arvaus = Console.ReadLine();
+
+                if (validateInput())
+                
+            }
+
+  }
 }
+
+
